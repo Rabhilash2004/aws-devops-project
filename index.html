@@ -1,0 +1,138 @@
+sudo tee /var/www/html/index.html << 'EOF'
+<!DOCTYPE html>
+<html>
+<head>
+<title>AWS DevOps Mini Project</title>
+
+<style>
+body{
+margin:0;
+font-family:"Segoe UI",Arial;
+background:linear-gradient(135deg,#232F3E,#131A22);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.box{
+background:white;
+padding:35px;
+border-radius:12px;
+width:560px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+animation:fade 1s ease;
+}
+
+.awslogo{
+width:120px;
+margin-bottom:10px;
+}
+
+.devopsimg{
+width:100%;
+border-radius:10px;
+margin:15px 0;
+}
+
+h1{
+color:#FF9900;
+margin:5px 0;
+}
+
+.subtitle{
+color:#0073BB;
+font-weight:600;
+margin-bottom:15px;
+}
+
+ul{
+list-style:none;
+padding:0;
+text-align:left;
+}
+
+li{
+margin:7px 0;
+font-weight:500;
+}
+
+p{
+font-size:14px;
+line-height:1.5;
+color:#444;
+text-align:justify;
+}
+
+button{
+margin-top:15px;
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:#FF9900;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#e68a00;
+}
+
+small{
+display:block;
+margin-top:20px;
+color:#666;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;}
+}
+
+</style>
+</head>
+
+<body>
+<div class="box">
+
+<img class="awslogo" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg">
+
+<h1>AWS DevOps Project </h1>
+<div class="subtitle">Infrastructure as Code (IaC) Demonstration</div>
+
+<img class="devopsimg" src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*Wq7r8k9p6gZpxK5t1d8Lzw.png">
+
+<ul>
+<li> Custom VPC & Subnet Configuration</li>
+<li> Security Group Rule Management</li>
+<li> EC2 Provisioning via CloudFormation</li>
+<li> Secure SSH Linux Access</li>
+<li> Apache Web Server Deployment</li>
+</ul>
+
+<p>
+This project demonstrates automated cloud infrastructure provisioning using AWS CloudFormation following the Infrastructure as Code approach. The entire infrastructure was defined using YAML templates, enabling repeatable and version-controlled deployments.
+</p>
+
+<p>
+The stack provisions a custom VPC, subnet, security rules, and EC2 instance. After deployment, the server was accessed via SSH and Apache was installed to host this live application.
+</p>
+
+<p>
+This reflects a real DevOps workflow: infrastructure design, automation, validation, and application delivery.
+</p>
+
+<button onclick="alert('AWS DevOps Project by Abhilash Ravikumar!')">
+View Project Info
+</button>
+
+<small>AWS  | DevOps Project | Built by Abhilash R</small>
+
+</div>
+</body>
+</html>
+EOF
